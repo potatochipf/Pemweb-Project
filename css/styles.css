@@ -1,0 +1,425 @@
+/* Add keyframes for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  /* General Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  /* Header Styles */
+  header {
+    background: url('https://i.pinimg.com/564x/86/5a/56/865a56fce03ee9563587bc626029d96d.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  header p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+  
+  header button {
+    padding: 10px 20px;
+    border: none;
+    background: #ff6f61;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  header button:hover {
+    background: #e05c50;
+  }
+  
+  /* Packages Section */
+  .packages-section {
+    padding: 50px 20px;
+  }
+  
+  .packages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .package {
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .package img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .package h3 {
+    padding: 10px;
+    font-size: 1.5em;
+  }
+  
+  .package p {
+    padding: 10px;
+    color: #666;
+  }
+  
+  /* Gallery Section */
+  .gallery-section {
+    padding: 50px 20px;
+    
+    
+  }
+  
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .gallery-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .contact-section form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-section input,
+  .contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-section button {
+    padding: 10px 20px;
+    border: none;
+    background: #ff6f61;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .packages-container {
+        flex-direction: column;
+    }
+  
+    .gallery-container img {
+        width: 150px;
+        height: 150px;
+    }
+  }
+  
+  
+  
+  /* General Animation Classes */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  /* Header Animation */
+  header h1, header p, header button {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  header h1 {
+    animation-delay: 0.2s;
+  }
+  
+  header p {
+    animation-delay: 0.4s;
+  }
+  
+  header button {
+    animation-delay: 0.6s;
+  }
+  
+  /* Package Card Animation */
+  .package {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.2s;
+  }
+  
+  .package:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .package:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  /* Gallery Image Hover Effect */
+  .gallery-container img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Contact Form Button Hover Effect */
+  .contact-section button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .contact-section button:hover {
+    background-color: #e05c50;
+    transform: translateY(-3px);
+  }
+  /* Pricing Section Styles */
+  .pricing-section {
+    padding: 50px 20px;
+    background-color: #f1f1f1;
+  }
+  
+  .pricing-section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .pricing-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+  }
+  
+  .pricing-table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    text-align: left;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pricing-table thead {
+    background-color: #ff6f61;
+    color: #fff;
+  }
+  
+  .pricing-table th, .pricing-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .pricing-table tbody tr:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+  }
+  
+  .pricing-table tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
+  }
+  /* Click Animation */
+  .pricing-section tbody tr:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+  
+  /* Menu Styling */
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  /* Login Button */
+  .login-button {
+    margin-right: 15px;
+    padding: 8px 16px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #e05c50;
+  }
+  
+  /* Social Media Icons */
+  .social-media {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icon:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .login-button {
+        margin-bottom: 10px;
+    }
+  }
+  /* Modal Styling */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 300px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .modal-content button {
+    padding: 10px;
+    width: 100%;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .modal-content button:hover {
+    background-color: #e05c50;
+  }
+  
+  
+  
+  /* Responsive Table */
+  @media (max-width: 600px) {
+    .pricing-table, .pricing-table thead, .pricing-table tbody, .pricing-table th, .pricing-table td, .pricing-table tr {
+        display: block;
+    }
+  
+    .pricing-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+  
+    .pricing-table tr {
+        margin: 0 0 1rem 0;
+        border: 1px solid #ddd;
+    }
+  
+    .pricing-table td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+  
+    .pricing-table td:before {
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #333;
+    }
+  
+    .pricing-table td:nth-of-type(1):before { content: "Destination"; }
+    .pricing-table td:nth-of-type(2):before { content: "Package"; }
+    .pricing-table td:nth-of-type(3):before { content: "Price"; }
+  }
+  
+  
